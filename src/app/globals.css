@@ -1,9 +1,11 @@
-/* @import "tailwindcss"; */
-@import "tailwindcss/preflight" layer(base);
-@import "tailwindcss/utilities" layer(utilities);
+@import "tailwindcss";
+/* @import "tailwindcss/preflight" layer(base);
+@import "tailwindcss/utilities" layer(utilities); */
 
 @theme {
   --color-primary: #0071ff;
+
+  --color-hotpink: color(display-p3 1 0 0.5);
 
   --color-brand: #5000ca;
   --color-brand-dark: color-mix(in oklab, var(--color-brand), #000 25%);

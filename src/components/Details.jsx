@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-function Details() {
+function Details({ children }) {
   const [toggle, setToggle] = useState(false);
   return (
     <div>
@@ -11,12 +11,7 @@ function Details() {
       >
         Toggle
       </button>
-      <div hidden={!toggle}>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius id enim
-          consectetur sit perspiciatis hic nemo harum officiis laudantium animi!
-        </p>
-      </div>
+      <div hidden={!toggle}>{children}</div>
     </div>
   );
 }

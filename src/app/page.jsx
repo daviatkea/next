@@ -1,10 +1,15 @@
-import Link from "next/link";
+"use server";
 
-export const metadata = {
-  title: "Dogs",
-  description: "Dogs are great!",
-};
+import Details from "@/components/Details";
 
-export default function Home() {
-  return <h1>Hello world!</h1>;
+export default async function Home() {
+  return (
+    <>
+      <h1 className="text-slate-900 text-2xl">Hello world!</h1>
+
+      <section className="p-10 bg-amber-200">
+        <Details />
+      </section>
+    </>
+  );
 }

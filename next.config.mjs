@@ -3,6 +3,9 @@ const nextConfig = {
   //   experimental: {
   //     useLightningcss: true,
   //   },
+  images: {
+    domains: ["images.unsplash.com"],
+  },
 };
 
 export default nextConfig;

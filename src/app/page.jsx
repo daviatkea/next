@@ -1,10 +1,10 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from "next/link";
+
+export const metadata = {
+  title: "Dogs",
+  description: "Dogs are great!",
+};
 
 export default function Home() {
-  return (
-    <main className="bg-hotpink">
-      <h1>Hello world!</h1>
-    </main>
-  );
+  return <h1>Hello world!</h1>;
 }

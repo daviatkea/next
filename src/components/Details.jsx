@@ -1,16 +1,12 @@
 "use client";
 import { useState } from "react";
+import Button from "./Button";
 
 function Details({ children }) {
   const [toggle, setToggle] = useState(false);
   return (
     <div>
-      <button
-        className="bg-black text-white px-4 py-1 rounded"
-        onClick={() => setToggle((toggle) => !toggle)}
-      >
-        Toggle
-      </button>
+      <Button onClick={() => setToggle((toggle) => !toggle)}>Toggle</Button>
       <div hidden={!toggle}>{children}</div>
     </div>
   );

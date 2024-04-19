@@ -1,8 +1,8 @@
 @import "tailwindcss";
-/* @import "tailwindcss/preflight" layer(base);
-@import "tailwindcss/utilities" layer(utilities); */
 
 @theme {
+  --color-btn: var(--color-primary);
+  --color-btn-text: var(--color-black);
   --color-primary: #0071ff;
 
   --color-hotpink: color(display-p3 1 0 0.5);
@@ -10,4 +10,15 @@
   --color-brand: #5000ca;
   --color-brand-dark: color-mix(in oklab, var(--color-brand), #000 25%);
   --color-brand-light: color-mix(in oklab, var(--color-brand), #fff 35%);
+
+  --font-family-brand: system-ui;
+}
+
+@layer theme {
+  :root {
+    [data-theme="brand"] {
+      --color-btn: var(--color-brand);
+      @apply text-white italic;
+    }
+  }
 }

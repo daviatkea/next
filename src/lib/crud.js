@@ -11,6 +11,7 @@ const headers = {
 export async function getItems(url, id) {
   const response = await fetch(`${url}?id=eq.${id}`, {
     headers: headers,
+    cache: "no-store",
   });
   const data = await response.json();
   return data;
@@ -23,6 +24,7 @@ export async function getEvent(id) {
 export async function getComments(id) {
   const response = await fetch(`${commentsUrl}?event_id=eq.${id}`, {
     headers: headers,
+    cache: "no-store",
   });
   const data = await response.json();
   return data;

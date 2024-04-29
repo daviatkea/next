@@ -13,6 +13,8 @@ export default async function AddEventPage() {
     const [{ id: eventID }] = await addEvent(data);
     // const eventID = eventData[0].id;
 
+    console.log(eventID);
+
     redirect(`/events/${eventID}`);
   }
   return (

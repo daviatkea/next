@@ -1,7 +1,7 @@
 import AddComment from "@/components/AddComment";
 import { getEvent, getComments } from "@/lib/crud";
 
-// export const dynamicParams = false;
+export const dynamicParams = false;
 export const dynamic = "force-dynamic";
 
 // export function generateStaticParams() {

@@ -30,10 +30,15 @@ export async function getComments(id) {
   return data;
 }
 
-async function addItem(url, data) {
+export async function addItem(url, data) {
   const response = await fetch(url, {
     method: "POST",
-    headers: headers,
+    headers: {
+      Accept: "application/json",
+      apikey: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+      Prefer: "return=representation",
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify(data),
   });
   return response.json();

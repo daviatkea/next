@@ -10,8 +10,9 @@ async function AddEventPage() {
       description: formData.get("description"),
     };
 
-    const [{ id: eventID }] = await addEvent(data);
-    // const eventID = eventData[0].id;
+    // const [{ id: eventID }] = await addEvent(data);
+    const eventData = await addEvent(data);
+    const eventID = eventData[0].id;
 
     redirect(`/events/${eventID}`);
   }

@@ -14,7 +14,7 @@
   --font-family-brand: system-ui;
 }
 
-@layer theme {
+@layer utilities {
   :root {
     [data-theme="brand"] {
       --color-btn: var(--color-brand);

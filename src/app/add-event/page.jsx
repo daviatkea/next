@@ -1,7 +1,7 @@
 import { addEvent } from "@/lib/crud";
 import { redirect } from "next/navigation";
 
-async function AddEventPage() {
+export default async function AddEventPage() {
   async function handleSubmit(formData) {
     "use server";
     const data = {
@@ -10,9 +10,8 @@ async function AddEventPage() {
       description: formData.get("description"),
     };
 
-    // const [{ id: eventID }] = await addEvent(data);
-    const eventData = await addEvent(data);
-    const eventID = eventData[0].id;
+    const [{ id: eventID }] = await addEvent(data);
+    // const eventID = eventData[0].id;
 
     redirect(`/events/${eventID}`);
   }
@@ -36,5 +35,3 @@ async function AddEventPage() {
     </div>
   );
 }
-
-export default AddEventPage;
